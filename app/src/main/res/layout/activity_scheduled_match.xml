@@ -38,7 +38,7 @@
                android:layout_marginBottom="2dp"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Abhishek Soam"
+               android:text="Abhishek Soam  (135)"
                />
 
            <TextView
@@ -47,6 +47,7 @@
                android:layout_height="wrap_content"
                android:text="Sports Teachers, Fitness Freak"
                />
+
 
            <TextView
                android:textSize="12sp"
@@ -69,9 +70,10 @@
 
 <android.support.v7.widget.CardView
     android:elevation="8dp"
+    android:padding="5dp"
     android:layout_marginBottom="18dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="50dp">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -110,13 +112,90 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="125 /- "
-            android:textColor="@android:color/holo_blue_dark"
+            android:textColor="@android:color/black"
 
             />
 
     </LinearLayout>
 
 </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="25dp"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Venue"
+                android:textColor="@android:color/holo_blue_dark"
+
+                />
+
+
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Huda GymKhanna Clud"
+                android:textColor="@android:color/black"
+
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="25dp"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Timings"
+                android:textColor="@android:color/holo_blue_dark"
+
+                />
+
+
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Evening Slot(5:00pm) Sep 6"
+                android:textColor="@android:color/black"
+
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
 
 
     <Button

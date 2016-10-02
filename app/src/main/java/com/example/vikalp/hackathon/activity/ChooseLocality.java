@@ -3,6 +3,7 @@ package com.example.vikalp.hackathon.activity;
 import android.content.Intent;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,7 @@ public class ChooseLocality extends AppCompatActivity {
             public void onClick(View v) {
                 EditText State = (EditText)findViewById(R.id.email);
                 String state = State.getText().toString();
+                TextInputLayout layout1 = (TextInputLayout) findViewById(R.id.input_layout_email_register);
 
                 EditText City = (EditText)findViewById(R.id.mobile);
                 String city = City.getText().toString();
@@ -32,10 +34,17 @@ public class ChooseLocality extends AppCompatActivity {
                 EditText Pin = (EditText)findViewById(R.id.op_password);
                 String pin = Pin.getText().toString();
 
+                if(state.length()<4){
+                    layout1.setError("Fill this field");
 
-                startActivity(new Intent(ChooseLocality.this,FixMatch.class));
+                }else{
+                    startActivity(new Intent(ChooseLocality.this,FixMatch.class));
+                }
+
+
             }
         });
         make.show();
+
     }
 }

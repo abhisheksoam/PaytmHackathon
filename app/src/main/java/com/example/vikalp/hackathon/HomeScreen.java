@@ -105,6 +105,7 @@ public class HomeScreen extends AppCompatActivity {
         adapter = new ViewPagerAdapter(this);
         viewPager.setAdapter(adapter);
         smartTabLayout = (TabLayout) findViewById(R.id.tabs);
+
         smartTabLayout.setupWithViewPager(viewPager);
         for (int i = 0; i < smartTabLayout.getTabCount(); i++) {
             if(i==0){

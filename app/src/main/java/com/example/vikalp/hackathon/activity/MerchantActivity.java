@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.vikalp.hackathon.HomeScreen;
 import com.example.vikalp.hackathon.R;
 import com.paytm.pgsdk.PaytmMerchant;
 import com.paytm.pgsdk.PaytmOrder;
@@ -22,35 +23,26 @@ import java.util.Random;
 public class MerchantActivity extends AppCompatActivity {
 
     String amount;
+    String orderID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant);
-        Intent intent = getIntent();
-        amount = intent.getStringExtra("Amount");
         initOrderId();
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-
-        onStartTransaction(findViewById(R.id.view));
+        View view = findViewById(R.id.view);
+        onStartTransaction(view);
     }
-
-    //This is to refresh the order id: Only for the Sample App's purpose.
-    @Override
-    protected void onStart(){
-        super.onStart();
-        initOrderId();
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-    }
-
 
     private void initOrderId() {
         Random r = new Random(System.currentTimeMillis());
         String orderId = "ORDER" + (1 + r.nextInt(2)) * 10000
                 + r.nextInt(10000);
-        //EditText orderIdEditText = (EditText) findViewById(R.id.order_id);
-        //orderIdEditText.setText(orderId);
-
+        orderID = orderId;
+        Log.e("order Hula",orderID);
     }
+
+
 
     public void onStartTransaction(View view) {
         PaytmPGService Service = PaytmPGService.getStagingService();
@@ -59,22 +51,20 @@ public class MerchantActivity extends AppCompatActivity {
         // these are mandatory parameters
 
         paramMap.put("REQUEST_TYPE", "DEFAULT");
-        paramMap.put("ORDER_ID", "ORDER12340");
+        paramMap.put("ORDER_ID", orderID);
         paramMap.put("MID", "PayAdd32357802476407");
-        paramMap.put("CUST_ID","CUST110");
+        paramMap.put("CUST_ID","abhi25");
         paramMap.put("CHANNEL_ID", "WAP");
         paramMap.put("INDUSTRY_TYPE_ID", "Retail");
-        paramMap.put("WEBSITE", "paytm");
-        paramMap.put("TXN_AMOUNT", amount);
-        paramMap.put("THEME ", "merchant");
-        paramMap.put("EMAIL", "abhisheksoam0@gmail.com");
-        paramMap.put("MOBILE_NO","7840016294" );
+        paramMap.put("WEBSITE", "AddandPay");
+        paramMap.put("TXN_AMOUNT", "125.0");
+        paramMap.put("THEME", "merchant");
 
         PaytmOrder Order = new PaytmOrder(paramMap);
 
         PaytmMerchant Merchant = new PaytmMerchant(
-                "http://10.0.2.2/PaytmKitApp/generateChecksum.php",
-                "http://10.0.2.2/PaytmKitApp/verifyChecksum.php");
+                "http://10.0.151.226:80/PaytmKitApp/generateChecksum.php",
+                "http://10.0.151.226:80/PaytmKitApp/verifyChecksum.php");
 
         Service.initialize(Order, Merchant, null);
 
@@ -119,6 +109,7 @@ public class MerchantActivity extends AppCompatActivity {
 
                     @Override
                     public void clientAuthenticationFailed(String inErrorMessage) {
+                        Log.e("Error",inErrorMessage);
                         // This method gets called if client authentication
                         // failed. // Failure may be due to following reasons //
                         // 1. Server error or downtime. // 2. Server unable to
@@ -131,13 +122,13 @@ public class MerchantActivity extends AppCompatActivity {
                     @Override
                     public void onErrorLoadingWebPage(int iniErrorCode,
                                                       String inErrorMessage, String inFailingUrl) {
-
+                        Log.e("Error",inErrorMessage);
                     }
 
                     // had to be added: NOTE
                     @Override
                     public void onBackPressedCancelTransaction() {
-                        // TODO Auto-generated method stub
+                        startActivity(new Intent(MerchantActivity.this, HomeScreen.class));
                     }
 
                 });

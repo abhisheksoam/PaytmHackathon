@@ -13,6 +13,7 @@
         android:layout_height="120dp"
         >
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -52,6 +53,7 @@ at Sports Complex in the Evening Slot, View Details"
 
     <android.support.v7.widget.CardView
         android:layout_marginBottom="5dp"
+
         android:layout_marginTop="5dp"
         android:elevation="4dp"
         android:layout_marginRight="10dp"
@@ -60,6 +62,7 @@ at Sports Complex in the Evening Slot, View Details"
         android:layout_height="120dp"
         >
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -109,6 +112,7 @@ at Match, View Complete info !"
         android:layout_height="120dp"
         >
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -156,6 +160,7 @@ at Match, View Complete info !"
         android:layout_height="120dp"
         >
         <LinearLayout
+            android:padding="5dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
