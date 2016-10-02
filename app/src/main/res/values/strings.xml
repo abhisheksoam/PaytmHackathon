@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Hackathon</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="help_support">Help And Support</string>
+    <string name="about">About</string>
+    <string name="contact">Contact</string>
+    <string name="resources">Resource</string>
+    <string name="hint_email">State</string>
+    <string name="hint_mobile">City</string>
+    <string name="hint_password_reg">Address</string>
+    <string name="PostalCode">Pincode</string>
+</resources>

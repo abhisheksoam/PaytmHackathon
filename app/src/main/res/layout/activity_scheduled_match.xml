@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vikalp.hackathon.activity.ScheduledMatch">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Opponent"
+        android:layout_marginBottom="3dp"
+        android:textColor="@android:color/holo_blue_light"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/profile_pic"
+            android:layout_width="94dp"
+            android:layout_height="94dp" />
+       <LinearLayout
+           android:gravity="center"
+           android:layout_marginLeft="10dp"
+           android:orientation="vertical"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent">
+           <TextView
+               android:gravity="center"
+               android:layout_marginBottom="2dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Abhishek Soam"
+               />
+
+           <TextView
+               android:layout_marginBottom="15dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sports Teachers, Fitness Freak"
+               />
+
+           <TextView
+               android:textSize="12sp"
+               android:textColor="@android:color/black"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Matches Won: 27"
+               />
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="13dp"
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+<android.support.v7.widget.CardView
+    android:elevation="8dp"
+    android:layout_marginBottom="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxLines="3"
+        android:text="Your Match is scheduled, It looks like that you are going to get a  tough challenge. All The Best "
+        />
+
+</android.support.v7.widget.CardView>
+<android.support.v7.widget.CardView
+    android:elevation="8dp"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="25dp"
+    android:layout_height="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Match Fees:"
+            android:textColor="@android:color/holo_blue_dark"
+
+            />
+
+
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="125 /- "
+            android:textColor="@android:color/holo_blue_dark"
+
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+
+    <Button
+        android:id="@+id/payButton"
+        android:padding="3dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center"
+        android:text="Pay With Paytm"
+        android:background="@drawable/layout_corners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

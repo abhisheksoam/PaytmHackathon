@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_resource"
+            android:visible="true"
+            android:title="@string/resources">
+
+                <item
+                    android:id="@+id/nav_ca"
+                    android:title="Home">
+
+                </item>
+                <item
+                    android:id="@+id/nav_magazine"
+                    android:title="Schedule Match">
+                </item>
+                <item
+                    android:id="@+id/nav_air"
+                    android:title="Top Players">
+                </item>
+                <item
+                    android:id="@+id/nav_vam"
+                    android:title="Upcoming Matches">
+
+                </item>
+
+            <item
+                android:id="@+id/portfolio"
+                android:title="PortFolio">
+
+            </item>
+
+
+            <item
+                android:id="@+id/performace"
+                android:title="Performance">
+
+            </item>
+
+
+            <item
+                android:id="@+id/matches"
+                android:title="Matches Played">
+
+            </item>
+
+            <item
+                android:id="@+id/recent"
+                android:title="Recent Activities">
+
+            </item>
+
+            <item
+                android:id="@+id/go"
+                android:title="Go For Gold">
+            </item>
+
+
+
+
+        </item>
+
+
+        <item android:title=""
+            android:id="@+id/student_account"
+            android:visible="false" >
+
+            <menu>
+                <item
+                    android:id="@+id/manage_account"
+                    android:title="Manage Account" />
+
+            </menu>
+        </item>
+
+
+
+
+        <item android:title="Details"
+            android:id="@+id/extra_details"
+            android:visible="true" >
+            <menu>
+                <item
+                    android:id="@+id/nav_contact"
+                    android:title="@string/contact" />
+                <item
+                    android:id="@+id/nav_about"
+                    android:title="@string/about" />
+
+                <item
+                    android:id="@+id/nav_help_support"
+                    android:title="@string/help_support" />
+            </menu>
+
+        </item>
+
+    </group>
+
+
+</menu>
